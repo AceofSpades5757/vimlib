@@ -20,7 +20,10 @@ setuptools.setup(
     long_description_content_type='text/markdown',
     python_requires='>=3.6',
     packages=setuptools.find_packages('src'),
-    package_dir={'': 'src', 'vimlib': 'src/vimlib'},
+    package_dir={
+        '': 'src',
+        'vimlib': 'src/vimlib',
+    },
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
