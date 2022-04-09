@@ -22,7 +22,7 @@ setuptools.setup(
     packages=setuptools.find_packages('src'),
     package_dir={
         '': 'src',
-        'vimlib': 'src/vimlib',
+        'pyvim': 'src/pyvim',
     },
     classifiers=[
         'Programming Language :: Python :: 3',
