@@ -1,0 +1,20 @@
+Execute python3 (Testing native vim interface):
+  import vim
+
+
+  #vim.current.buffer.append('Hello')
+  vim.current.buffer[0] = 'Hello'
+
+Expect:
+  Hello
+
+##########################################
+
+Execute python3 (Testing pyvim interface):
+  import pyvim
+
+
+  pyvim.current.buffer[0] = 'Hello'
+
+Expect:
+  Hello
