@@ -25,7 +25,11 @@ class SpecialArgument(Flag):
     UNIQUE = auto()
 
     def __init__(self, value: int):
-        self._name_ = self._name_.lower()
+        # self._name_ is Optional[str]
+        if self._name_ is not None:
+            self._name_ = self._name_.lower()
+        else:
+            self._name_
 
     def __str__(self):
         included_options: list[SpecialArgument] = [
