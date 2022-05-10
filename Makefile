@@ -33,7 +33,7 @@ venv:
 
 test:
 	@echo "Testing $(PROJECT_NAME)."
-	vim -N -u ./testrc -c "Vader! tests/*.vader"
+	vim -N -u ./testrc -c "Vader! tests/*.vader" && echo Success || echo Failure
 	@echo "MOSTLY NOT IMPLEMENTED."
 	#${VENV_BIN}/pip install --upgrade pip
 	#${VENV_BIN}/pip install tox tox-gh-actions
