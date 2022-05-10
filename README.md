@@ -13,7 +13,7 @@ Vim, or Neovim, to use, install `vimlib` using that.
 Examples:
 
 * `~/vimfiles/.venv/bin/pip.exe install --upgrade vimlib`
-* `cd ~/vimfiles && pipenv install vimlib`
+* `cd ~/vimfiles && poetry install vimlib`
 <!--
 *
 ``` sh
