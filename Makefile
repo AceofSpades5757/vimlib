@@ -24,8 +24,10 @@ help:
 	@echo "----------------------------------------------"
 
 venv:
-	$(PYTHON) -m venv $(VENV_DIR)
-	${VENV_BIN}/pip install --upgrade pip
+	$(PYTHON) install --upgrade pip
+	$(PYTHON) -m pip install --upgrade virtualenv
+	$(PYTHON) -m virtualenv $(VENV_DIR)
+	-${VENV_BIN}/pip install --upgrade pip
 	$(VENV_BIN)/pip install --upgrade -r requirements.txt
 	$(VENV_BIN)/pip install --upgrade -r requirements-dev.txt
 
