@@ -31,7 +31,8 @@ venv:
 
 test: venv
 	@echo "Testing $(PROJECT_NAME)."
-	@echo "NOT IMPLEMENTED."
+	vim -N -u ./testrc -c "Vader! tests/*.vader"
+	@echo "MOSTLY NOT IMPLEMENTED."
 	#${VENV_BIN}/pip install --upgrade pip
 	#${VENV_BIN}/pip install tox tox-gh-actions
 	#${VENV_BIN}/tox
