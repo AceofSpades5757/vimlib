@@ -31,7 +31,7 @@ venv:
 	$(VENV_BIN)/pip install --upgrade -r requirements.txt
 	$(VENV_BIN)/pip install --upgrade -r requirements-dev.txt
 
-test: venv
+test:
 	@echo "Testing $(PROJECT_NAME)."
 	vim -N -u ./testrc -c "Vader! tests/*.vader"
 	@echo "MOSTLY NOT IMPLEMENTED."
