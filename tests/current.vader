@@ -1,3 +1,12 @@
+# Testing:     current
+# Version:     0.0.1
+# Modified:    May 09, 2022
+# Description:
+#
+#     Test `current` module.
+#
+
+
 Execute python3 (Testing native vim interface):
   import vim
 
@@ -15,6 +24,40 @@ Execute python3 (Testing pyvim interface):
 
 
   pyvim.current.buffer[0] = 'Hello'
+
+Expect:
+  Hello
+
+##########################################
+#
+# pyvim.current.buffer and vim.current.buffer
+# should effectively do the same thing.
+#
+
+Given:
+  Hello
+
+Execute:
+
+Then:
+  call assert_equal(py3eval("pyvim.current.buffer[0]"), py3eval("vim.current.buffer[0]"))
+
+Expect:
+  Hello
+
+##########################################
+
+Given:
+  Hello
+
+Execute python3:
+  import vim
+
+  import pyvim
+
+Execute:
+  AssertEqual py3eval("pyvim.current.buffer[0]"), py3eval("vim.current.buffer[0]")
+  AssertEqual 0, 1
 
 Expect:
   Hello
