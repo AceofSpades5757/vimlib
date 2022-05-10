@@ -44,9 +44,10 @@ clean:
 	# Build Directories
 	rm -rf build/
 	rm -rf dist/
-	# Temporary Files
+	# Temporary Files & Caches
 	rm -rf **/__pycache__/
 	rm -rf **/*.egg-info/
+	rm -rf **/.mypy_cache/
 
 build: venv
 	@echo "Building $(PROJECT_NAME)."
