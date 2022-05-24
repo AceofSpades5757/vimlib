@@ -113,22 +113,17 @@ Examples
 :<C-u>silent w!<CR>
 ```
 
-## Job
+## Mappings
 
-**WARNING: Non-Working**
-
-`vimlib` offers a convenient way to interact Vim jobs and channels.
+`vimlib` offers a convenient way to interact Vim mappings.
 
 ```python
-import pyvim
-
-
-vim_job = pyvim.Job(
-    cmd='python -m http.server',
-)
-
-vim_job.stop()
-vim_job.status
+>>> import pyvim
+>>>
+>>>
+>>> # Set <Leader>r to write current buffer to disk.
+>>> # Equivalent to `:nmap <Leader>r :<C-u>silent w<CR>` in Vim.
+>>> set_mapping('nmap', '<Leader>r', ':<C-u>silent w<CR>')
 ```
 
 ## Function
@@ -149,4 +144,22 @@ vim_function = pyvim.Function(
 )
 
 result = vim_function(...)
+```
+
+## Job
+
+**WARNING: Non-Working**
+
+`vimlib` offers a convenient way to interact Vim jobs and channels.
+
+```python
+import pyvim
+
+
+vim_job = pyvim.Job(
+    cmd='python -m http.server',
+)
+
+vim_job.stop()
+vim_job.status
 ```
