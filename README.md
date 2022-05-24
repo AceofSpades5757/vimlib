@@ -78,3 +78,23 @@ from pyvim import current
 # Support basic, linewise, and block visual highlights
 selection = pyvim.current.selection
 ```
+
+## Function
+
+**WARNING: Non-Working**
+
+`vimlib` offers a convenient way to interact Vim functions.
+
+```python
+import pyvim
+
+
+vim_function = pyvim.Function(
+    name="Foo",
+    arguments=None,
+    optional_arguments=True,
+    overwrite=True,
+)
+
+result = vim_function(...)
+```
