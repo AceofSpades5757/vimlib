@@ -6,7 +6,7 @@ import vim
 
 
 def echo(
-    statement='',
+    statement="",
     highlight_style=None,
     style=None,
 ):
@@ -18,14 +18,14 @@ def echo(
     vim.command("highlight PyVimDanger guifg='Red' ctermfg='Red'")
 
     if highlight_style:
-        vim.command(f'echohl {highlight_style}')
+        vim.command(f"echohl {highlight_style}")
         vim.command(f'echo "{statement}"')
-        vim.command('echohl None')
+        vim.command("echohl None")
         # FIX This should be pyvim.highlight_groups
         if highlight_style not in pyvim.highlight_groups.names:
-            vim.command('echohl WarningMsg')
+            vim.command("echohl WarningMsg")
             vim.command('echo "Highlight Group not detected."')
-            vim.command('echohl None')
+            vim.command("echohl None")
     else:
         vim.command(f'echo "{statement}"')
 

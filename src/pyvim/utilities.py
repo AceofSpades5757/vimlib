@@ -34,16 +34,16 @@ def wrap_vim_command(
     :<C-u>silent w!<CR>
     """
 
-    enter: Final[str] = '<CR>'
-    silent_prefix: Final[str] = 'silent '
+    enter: Final[str] = "<CR>"
+    silent_prefix: Final[str] = "silent "
 
     if silent:
         command = silent_prefix + command
 
     if clear:
         # Needs to be first, so it doesn't clear other options.
-        command = '<C-u>' + command
+        command = "<C-u>" + command
 
-    command = ':' + command + enter
+    command = ":" + command + enter
 
     return command

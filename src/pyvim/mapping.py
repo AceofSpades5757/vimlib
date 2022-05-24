@@ -35,7 +35,7 @@ class SpecialArgument(Flag):
         included_options: list[SpecialArgument] = [
             flag for flag in SpecialArgument if flag & self
         ]
-        return ' '.join(f'<{flag._name_}>' for flag in included_options)
+        return " ".join(f"<{flag._name_}>" for flag in included_options)
 
 
 def get_mapping(mapping: str, key: str, command: str) -> str:
@@ -47,14 +47,14 @@ def get_mapping(mapping: str, key: str, command: str) -> str:
     nmap <Leader>r :silent w
 
     """
-    raise NotImplementedError('`get_mapping` is not implemented yet.')
+    raise NotImplementedError("`get_mapping` is not implemented yet.")
 
 
 def set_mapping(
     mapping: str,
     key: str,
     command: str,
-    special_arguments: Union[SpecialArgument, str] = '',
+    special_arguments: Union[SpecialArgument, str] = "",
 ) -> None:
     """Set a mapping.
 
@@ -64,7 +64,7 @@ def set_mapping(
     >>> # Equivalent to `:nmap <Leader>r :<C-u>silent w<CR>` in Vim.
     >>> set_mapping('nmap', '<Leader>r', ':<C-u>silent w<CR>')
     """
-    vim_command: str = '{} {} {} {}'.format(
+    vim_command: str = "{} {} {} {}".format(
         mapping, special_arguments, key, command
     )
 

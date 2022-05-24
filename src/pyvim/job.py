@@ -47,7 +47,7 @@ class Job:
         # Need to pass a Vim job object to it...
         process = self.process
         vim.command(
-            '|'.join(
+            "|".join(
                 f"""
         for job in job_info()
             if {process} == job_info(job)['process']

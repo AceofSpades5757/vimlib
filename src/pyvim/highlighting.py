@@ -19,7 +19,7 @@ class HighlightGroup:
         return item in self.attributes
 
     def __str__(self):
-        return f'{self.name}\n\t{self.attributes}'
+        return f"{self.name}\n\t{self.attributes}"
 
     def __repr__(self):
         return self.__str__()
@@ -34,59 +34,59 @@ class HighlightGroup:
 class HighlightGroupCollection:
 
     defaults = [
-        'ColorColumn',
-        'Conceal',
-        'Cursor',
-        'lCursor',
-        'CursorIM',
-        'CursorColumn',
-        'CursorLine',
-        'Directory',
-        'DiffAdd',
-        'DiffChange',
-        'DiffDelete',
-        'DiffText',
-        'EndOfBuffer',
-        'ErrorMsg',
-        'VertSplit',
-        'Folded',
-        'FoldColumn',
-        'SignColumn',
-        'IncSearch',
-        'LineNr',
-        'LineNrAbove',
-        'LineNrBelow',
-        'CursorLineNr',
-        'MatchParen',
-        'ModeMsg',
-        'MoreMsg',
-        'NonText',
-        'Normal',
-        'Pmenu',
-        'PmenuSel',
-        'PmenuSbar',
-        'PmenuThumb',
-        'Question',
-        'QuickFixLine',
-        'Search',
-        'SpecialKey',
-        'SpellBad',
-        'SpellCap',
-        'SpellLocal',
-        'SpellRare',
-        'StatusLine',
-        'StatusLineNC',
-        'StatusLineTerm',
-        'StatusLineTermNC',
-        'TabLine',
-        'TabLineFill',
-        'TabLineSel',
-        'Terminal',
-        'Title',
-        'Visual',
-        'VisualNOS',
-        'WarningMsg',
-        'WildMenu',
+        "ColorColumn",
+        "Conceal",
+        "Cursor",
+        "lCursor",
+        "CursorIM",
+        "CursorColumn",
+        "CursorLine",
+        "Directory",
+        "DiffAdd",
+        "DiffChange",
+        "DiffDelete",
+        "DiffText",
+        "EndOfBuffer",
+        "ErrorMsg",
+        "VertSplit",
+        "Folded",
+        "FoldColumn",
+        "SignColumn",
+        "IncSearch",
+        "LineNr",
+        "LineNrAbove",
+        "LineNrBelow",
+        "CursorLineNr",
+        "MatchParen",
+        "ModeMsg",
+        "MoreMsg",
+        "NonText",
+        "Normal",
+        "Pmenu",
+        "PmenuSel",
+        "PmenuSbar",
+        "PmenuThumb",
+        "Question",
+        "QuickFixLine",
+        "Search",
+        "SpecialKey",
+        "SpellBad",
+        "SpellCap",
+        "SpellLocal",
+        "SpellRare",
+        "StatusLine",
+        "StatusLineNC",
+        "StatusLineTerm",
+        "StatusLineTermNC",
+        "TabLine",
+        "TabLineFill",
+        "TabLineSel",
+        "Terminal",
+        "Title",
+        "Visual",
+        "VisualNOS",
+        "WarningMsg",
+        "WildMenu",
     ]
 
     def __init__(self, highlight_groups=None):
@@ -97,7 +97,7 @@ class HighlightGroupCollection:
             self.groups = highlight_groups
 
     def __str__(self):
-        return '\n'.join([str(i) for i in self.groups])
+        return "\n".join([str(i) for i in self.groups])
 
     def __repr__(self):
         return self.__str__()
@@ -161,8 +161,8 @@ class HighlightGroupCollection:
         """
         vim.command(redir_function)
 
-        function = 'RedirectCommandOutput'
-        argument = 'highlight'
+        function = "RedirectCommandOutput"
+        argument = "highlight"
         command = f'{function}("{argument}")'
         group_lines = vim.eval(command).splitlines()
 
@@ -173,8 +173,8 @@ class HighlightGroupCollection:
             if not line:
                 continue
 
-            notes = ''
-            if line.startswith(' '):
+            notes = ""
+            if line.startswith(" "):
                 notes = line.strip()
                 continue
 
@@ -185,8 +185,8 @@ class HighlightGroupCollection:
 
             attributes = {}
             for pair in attributes_list:
-                key = pair.split('=')[0]
-                value = pair.split('=')[-1]
+                key = pair.split("=")[0]
+                value = pair.split("=")[-1]
                 attributes[key] = value
 
             group = HighlightGroup(name, **attributes)

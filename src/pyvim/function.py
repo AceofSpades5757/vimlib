@@ -25,7 +25,7 @@ class Function:
             # FIX: arg1, arg2, optarg1=value, ...
             self.optional_arguments = optional_arguments
 
-        bang = '!' if overwrite else ''
+        bang = "!" if overwrite else ""
 
         # FIX - Spacing to the left
         command = f"""function{bang} {self.name}({arguments})

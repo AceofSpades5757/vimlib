@@ -9,12 +9,12 @@ from pyvim.register import Register
 
 
 __all__ = [
-    'current',
-    'env',
-    'environment',
-    'echo',
-    'highlight_groups',
-    'Function',
-    'Register',
-    'Job',
+    "current",
+    "env",
+    "environment",
+    "echo",
+    "highlight_groups",
+    "Function",
+    "Register",
+    "Job",
 ]
