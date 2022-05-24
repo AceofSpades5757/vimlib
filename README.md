@@ -5,8 +5,6 @@
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/vimlib?label=Python%20Version&logo=python&logoColor=yellow)](https://pypi.org/project/vimlib/)
 [![PyPI - License](https://img.shields.io/pypi/l/vimlib?color=green)](https://github.com/AceofSpades5757/vimlib/blob/main/LICENSE)
 
-[![Tests](https://github.com/AceofSpades5757/vimlib/actions/workflows/test.yml/badge.svg)](https://github.com/AceofSpades5757/vimlib/actions/workflows/test.yml)
-
 [![Read the Docs](https://img.shields.io/readthedocs/vimlib)](https://vimlib.readthedocs.io/en/latest/)
 
 A friendly interface for interacting with Vim using Python.
