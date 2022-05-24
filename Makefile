@@ -1,4 +1,3 @@
-# Variables
 PROJECT_NAME = vimlib
 VENV_DIR = .venv
 
@@ -9,9 +8,12 @@ else
 	PYTHON = python3
 	VENV_BIN = ./.venv/bin
 endif
+VENV_PYTHON = $(VENV_BIN)/python
+VENV_PIP = $(VENV_BIN)/pip
 
 # Settings
 .DEFAULT_GOAL = help
+.PHONE: help, venv, test, clean, build, publish
 
 
 help:
@@ -27,17 +29,17 @@ venv:
 	$(PYTHON) -m pip install --upgrade pip
 	$(PYTHON) -m pip install --upgrade virtualenv
 	$(PYTHON) -m virtualenv $(VENV_DIR)
-	-${VENV_BIN}/pip install --upgrade pip
-	$(VENV_BIN)/pip install --upgrade -r requirements.txt
-	$(VENV_BIN)/pip install --upgrade -r requirements-dev.txt
+	-$(VENV_PIP) install --upgrade pip
+	$(VENV_PIP) install --upgrade -r requirements.txt
+	$(VENV_PIP) install --upgrade -r requirements-dev.txt
 
 test:
 	@echo "Testing $(PROJECT_NAME)."
 	vim -N -u ./testrc -c "Vader! tests/*.vader" && echo Success || echo Failure
 	@echo "MOSTLY NOT IMPLEMENTED."
-	#${VENV_BIN}/pip install --upgrade pip
-	#${VENV_BIN}/pip install tox tox-gh-actions
-	#${VENV_BIN}/tox
+	#$(VENV_PIP) install --upgrade pip
+	#$(VENV_PIP) install tox tox-gh-actions
+	#$(VENV_BIN)/tox
 
 clean:
 	@echo "Removing temporary files and caches."
@@ -52,9 +54,9 @@ clean:
 build: venv
 	@echo "Building $(PROJECT_NAME)."
 	# Build
-	${VENV_BIN}/python setup.py sdist bdist_wheel
+	$(VENV_PYTHON) setup.py sdist bdist_wheel
 
-release: clean build
+publish: build
 	@echo "Deploying $(PROJECT_NAME) to PyPi."
-	${VENV_BIN}/pip install --upgrade twine
-	${VENV_BIN}/python -m twine upload dist/*
+	$(VENV_PIP) install --upgrade twine
+	$(VENV_PYTHON) -m twine upload dist/*
