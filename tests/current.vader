@@ -57,7 +57,7 @@ Execute python3:
 
 Execute:
   AssertEqual py3eval("pyvim.current.buffer[0]"), py3eval("vim.current.buffer[0]")
-  AssertEqual 0, 1
+  "AssertEqual 0, 1
 
 Expect:
   Hello
