@@ -27,6 +27,15 @@ cd ~/vimfiles \
 
 # Usage
 
+## Current
+
+`vimlib` offers a convenient way to interact with the current environment, much
+like Vim's built-in current object.
+
+```python
+from pyvim import current
+```
+
 ## Highlight Groups
 
 `vimlib` offers a convenient way to interact with highlight groups.
