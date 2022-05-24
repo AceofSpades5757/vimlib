@@ -163,3 +163,11 @@ vim_job = pyvim.Job(
 vim_job.stop()
 vim_job.status
 ```
+
+## Registers
+
+`vimlib` offers a convenient way to interact Vim registers.
+
+```python
+>>> import pyvim.Register
+```
