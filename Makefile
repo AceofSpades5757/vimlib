@@ -31,7 +31,7 @@ venv:
 	$(PYTHON) -m virtualenv $(VENV_DIR)
 	-$(VENV_PIP) install --upgrade pip
 	$(VENV_PIP) install --upgrade -r requirements.txt
-	$(VENV_PIP) install --upgrade -r requirements-dev.txt
+	$(VENV_PIP) install --upgrade -r dev-requirements.txt
 
 test:
 	@echo "Testing $(PROJECT_NAME)."
