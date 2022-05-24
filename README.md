@@ -12,26 +12,28 @@ Vim, or Neovim, to use, install `vimlib` using that.
 
 Examples:
 
-* `~/vimfiles/.venv/bin/pip.exe install --upgrade vimlib`
-* `cd ~/vimfiles && poetry install vimlib`
+- `~/vimfiles/.venv/bin/pip.exe install --upgrade vimlib`
+- `cd ~/vimfiles && poetry install vimlib`
 <!--
-*
-``` sh
+-
+
+```sh
 cd ~/vimfiles \
 && python3 -m venv .venv \
 && ~/vimfiles/.venv/bin/pip.exe install --upgrade vimlib
 ```
+
 -->
 
 # Usage
 
+## Highlight Groups
+
+`vimlib` offers a convenient way to interact with highlight groups.
+
 ```python
 from pyvim import current
 
-
-# String with the current, or last, selection.
-# Support basic, linewise, and block visual highlights
-selection = pyvim.current.selection
 
 # Boolean. Check if a highlight group is available
 has_highlight = 'MyHighlightGroup' in pyvim.current.highlights
