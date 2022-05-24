@@ -1,6 +1,14 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
+[![PyPI](https://img.shields.io/pypi/v/vimlib?color=darkred)](https://pypi.org/project/vimlib/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/vimlib?label=Python%20Version&logo=python&logoColor=yellow)](https://pypi.org/project/vimlib/)
+[![PyPI - License](https://img.shields.io/pypi/l/vimlib?color=green)](https://github.com/AceofSpades5757/vimlib/blob/main/LICENSE)
+
+[![Tests](https://github.com/AceofSpades5757/vimlib/actions/workflows/tests.yml/badge.svg)](https://github.com/AceofSpades5757/vimlib/actions/workflows/tests.yml)
+
+[![Read the Docs](https://img.shields.io/readthedocs/vimlib)](https://vimlib.readthedocs.io/en/latest/)
+
 A friendly interface for interacting with Vim using Python.
 
 # Installation
