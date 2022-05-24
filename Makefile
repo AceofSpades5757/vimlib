@@ -36,10 +36,6 @@ venv:
 test:
 	@echo "Testing $(PROJECT_NAME)."
 	vim -N -u ./testrc -c "Vader! tests/*.vader" && echo Success || echo Failure
-	@echo "MOSTLY NOT IMPLEMENTED."
-	#$(VENV_PIP) install --upgrade pip
-	#$(VENV_PIP) install tox tox-gh-actions
-	#$(VENV_BIN)/tox
 
 clean:
 	@echo "Removing temporary files and caches."
