@@ -5,12 +5,10 @@ import setuptools
 
 with open("README.md", "r") as fin:
     long_description = fin.read()
-with open("LICENSE", "r") as fin:
-    license = fin.read()
 
 setuptools.setup(
     name="vimlib",
-    version="0.0.5",
+    version="0.0.6",
     license="MIT",
     author="Kyle L. Davis",
     author_email="AceofSpades5757.github@gmail.com",
