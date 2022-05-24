@@ -79,6 +79,40 @@ from pyvim import current
 selection = pyvim.current.selection
 ```
 
+## Utilities
+
+`vimlib` offers convenient utilities.
+
+### System Commands
+
+_Note: Chaining will stack `<CR>` and other tokens._
+
+```python
+from pyvim.utilities import wrap_vim_command
+
+
+wrapped_command: str = wrap_vim_command(
+    command="!py %",
+    silent=True,
+    clear=True,
+)
+
+print(wrapped_command)
+# ":<C-U>silent !py %<CR>
+```
+
+Examples
+
+```python
+>>> print(wrap_vim_command('w'))
+:<C-u>w<CR>
+```
+
+```python
+>>> print(wrap_vim_command('w!', silent=True))
+:<C-u>silent w!<CR>
+```
+
 ## Function
 
 **WARNING: Non-Working**
