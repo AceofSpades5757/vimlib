@@ -51,7 +51,7 @@ clean:
 	rm -rf **/*.egg-info/
 	rm -rf **/.mypy_cache/
 
-build: venv
+build:
 	@echo "Building $(PROJECT_NAME)."
 	# Build
 	$(VENV_PYTHON) setup.py sdist bdist_wheel
