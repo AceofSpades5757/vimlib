@@ -13,7 +13,7 @@ VENV_PIP = $(VENV_BIN)/pip
 
 # Settings
 .DEFAULT_GOAL = help
-.PHONE: help, venv, test, clean, build, publish
+.PHONY: help venv test clean build publish
 
 
 help:
