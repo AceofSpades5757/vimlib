@@ -36,6 +36,23 @@ like Vim's built-in current object.
 from pyvim import current
 ```
 
+## Echo
+
+`vimlib` offers a convenient way to print to Vim's stdout in a colorful, and
+flexible, manner.
+
+```python
+import pyvim
+
+
+# Print to STDOUT
+pyvim.echo("Hello!")
+# Print with chosen highlight group
+pyvim.echo("Hello!", "PyVimSuccess")  # Built-In Green
+pyvim.echo("Hello!", "PyVimCaution")  # Built-In Yellow
+pyvim.echo("Hello!", "PyVimDanger")   # Built-In Red
+```
+
 ## Highlight Groups
 
 `vimlib` offers a convenient way to interact with highlight groups.
