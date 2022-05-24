@@ -47,3 +47,17 @@ from pyvim import current
 # Boolean. Check if a highlight group is available
 has_highlight = 'MyHighlightGroup' in pyvim.current.highlights
 ```
+
+## Visual Selection
+
+`vimlib` offers a convenient way to interact with highlighted text. Also
+highlights the most recent highlighted text.
+
+```python
+from pyvim import current
+
+
+# String with the current, or last, selection.
+# Support basic, linewise, and block visual highlights
+selection = pyvim.current.selection
+```
