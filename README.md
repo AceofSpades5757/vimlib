@@ -113,6 +113,24 @@ Examples
 :<C-u>silent w!<CR>
 ```
 
+## Job
+
+**WARNING: Non-Working**
+
+`vimlib` offers a convenient way to interact Vim jobs and channels.
+
+```python
+import pyvim
+
+
+vim_job = pyvim.Job(
+    cmd='python -m http.server',
+)
+
+vim_job.stop()
+vim_job.status
+```
+
 ## Function
 
 **WARNING: Non-Working**
