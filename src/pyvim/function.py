@@ -33,3 +33,8 @@ class Function:
 
         """.strip()
         vim.command(command)
+
+    def __call__(self, *args, **kwargs):
+        raise NotImplementedError(
+            "This interface has not yet been implemented."
+        )
