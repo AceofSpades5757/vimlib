@@ -15,6 +15,10 @@ setuptools.setup(
     author='Kyle L. Davis',
     author_email='AceofSpades5757.github@gmail.com',
     url='https://github.com/AceofSpades5757/vimlib',
+    project_urls={
+        'Documentation': 'https://vimlib.readthedocs.io/en/latest/',
+        'Author': 'https://github.com/AceofSpades5757',
+    },
     description='Friendly Python interface for interacting with Vim.',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -24,6 +28,7 @@ setuptools.setup(
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
+        "Development Status :: 3 - Alpha",
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
