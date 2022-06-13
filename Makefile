@@ -22,7 +22,7 @@ help:
 	@echo "make test    - Test."
 	@echo "make clean   - Clean build directories, temporary files, and caches."
 	@echo "make build   - Build with setup.py."
-	@echo "make release - Deploy to PyPi."
+	@echo "make publish - Publish to PyPi."
 	@echo "----------------------------------------------"
 
 venv:
@@ -53,6 +53,6 @@ build:
 	$(VENV_PYTHON) setup.py sdist bdist_wheel
 
 publish: build
-	@echo "Deploying $(PROJECT_NAME) to PyPi."
+	@echo "Publishing $(PROJECT_NAME) to PyPi."
 	$(VENV_PIP) install --upgrade twine
 	$(VENV_PYTHON) -m twine upload dist/*
