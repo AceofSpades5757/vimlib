@@ -34,6 +34,7 @@ Current
 like Vim's built-in current object.
 
 .. code-block:: python
+
   from pyvim import current
 
 Echo
@@ -43,6 +44,7 @@ Echo
 flexible, manner.
 
 .. code-block:: python
+
   import pyvim
 
 
@@ -59,6 +61,7 @@ Highlight Groups
 ``vimlib`` offers a convenient way to interact with highlight groups.
 
 .. code-block:: python
+
   from pyvim import current
 
 
@@ -72,6 +75,7 @@ Visual Selection
 highlights the most recent highlighted text.
 
 .. code-block:: python
+
   from pyvim import current
 
 
@@ -90,6 +94,7 @@ System Commands
 *Note: Chaining will stack ``<CR>`` and other tokens.*
 
 .. code-block:: python
+
   from pyvim.utilities import wrap_vim_command
 
 
@@ -105,10 +110,12 @@ System Commands
 Examples
 
 .. code-block:: python
+
   >>> print(wrap_vim_command('w'))
   :<C-u>w<CR>
 
 .. code-block:: python
+
   >>> print(wrap_vim_command('w!', silent=True))
   :<C-u>silent w!<CR>
 
@@ -118,6 +125,7 @@ Mappings
 ``vimlib`` offers a convenient way to interact Vim mappings.
 
 .. code-block:: python
+
   >>> import pyvim
   >>>
   >>>
@@ -133,6 +141,7 @@ Function
 ``vimlib`` offers a convenient way to interact Vim functions.
 
 .. code-block:: python
+
   import pyvim
 
 
@@ -153,6 +162,7 @@ Job
 ``vimlib`` offers a convenient way to interact Vim jobs and channels.
 
 .. code-block:: python
+
   import pyvim
 
 
@@ -169,6 +179,7 @@ Registers
 ``vimlib`` offers a convenient way to interact Vim registers.
 
 .. code-block:: python
+
   >>> import pyvim.Register
 
 Indices and tables
