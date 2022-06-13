@@ -8,7 +8,7 @@ with open("README.md", "r") as fin:
 
 setuptools.setup(
     name="vimlib",
-    version="0.0.9",
+    version="0.0.10",
     license="MIT",
     author="Kyle L. Davis",
     author_email="AceofSpades5757.github@gmail.com",
