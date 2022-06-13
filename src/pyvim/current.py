@@ -1,7 +1,10 @@
 from pathlib import Path
 from types import SimpleNamespace
 
-import vim
+try:
+    import vim
+except ImportError:
+    pass
 from pyvim.job import Job
 
 

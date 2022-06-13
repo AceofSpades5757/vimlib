@@ -1,13 +1,20 @@
 """ Vim Highlighting """
 import re
 
-import vim
+try:
+    import vim
+except ImportError:
+    pass
 
 
-""" Add Custom Highlight Groups """
-vim.command("highlight PyVimSuccess guifg='Green' ctermfg='Green'")
-vim.command("highlight PyVimCaution guifg='Yellow' ctermfg='DarkYellow'")
-vim.command("highlight PyVimDanger guifg='Red' ctermfg='Red'")
+try:
+    # Add Custom Highlight Groups
+    vim.command("highlight PyVimSuccess guifg='Green' ctermfg='Green'")
+    vim.command("highlight PyVimCaution guifg='Yellow' ctermfg='DarkYellow'")
+    vim.command("highlight PyVimDanger guifg='Red' ctermfg='Red'")
+except NameError:
+    # Outside Vim Environment
+    pass
 
 
 class HighlightGroup:

@@ -1,6 +1,10 @@
 """ A simplified way to print, or echo, using colors. """
 import pyvim
-import vim
+
+try:
+    import vim
+except ImportError:
+    pass
 
 # from pyvim import highlight_groups
 

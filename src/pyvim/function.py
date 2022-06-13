@@ -1,4 +1,7 @@
-import vim
+try:
+    import vim
+except ImportError:
+    pass
 
 
 class Function:

@@ -2,7 +2,10 @@
 
 Currently a placeholder.
 """
-import vim
+try:
+    import vim
+except ImportError:
+    pass
 
 
 # py3 pyvim.register('*') = pyvim.current.file.name

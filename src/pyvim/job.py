@@ -2,7 +2,10 @@
 
 Should be moved to a branch (e.g. `jobs`)
 """
-import vim
+try:
+    import vim
+except ImportError:
+    pass
 
 
 # pyvim.Job('flask run')
