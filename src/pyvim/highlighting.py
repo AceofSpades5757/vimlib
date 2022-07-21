@@ -166,7 +166,11 @@ class HighlightGroupCollection:
                 return out
         endfunction
         """
-        vim.command(redir_function)
+        try:
+            vim.command(redir_function)
+        except NameError:
+            # Outside Vim Environment
+            return []
 
         function = "RedirectCommandOutput"
         argument = "highlight"
